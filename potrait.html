@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  
+  <title>GraphicDesign</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Lexend:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/fifth.css">
+	
+
+</head>
+<body>
+	
+    <div class="reveal" id="SuperWrapper">
+		
+	<div id="Wrapper"> 
+		
+	<div id="navbar">
+		
+	<div id="Logo"> 
+	<img src="image/icon/Asset 1.png" alt="logo" />
+	</div>
+			
+	
+	<div id="navigation">
+    <a href="About_Me.html">About Me</a>
+    <a href="painting.html">Painting</a>
+    <a href="drawing.html">Drawing</a>
+    <a href="graphic_design.html">Graphic Design</a>
+	<a href="potrait.html">Potrait & Caricature</a>
+	<a href="digital_art.html">Digital Art</a>
+	</div>
+		
+	<div id="Icon">
+	<a href="https://instagram.com/syirahk_/"><img src="image/icon/instagram.png"></a>
+	<a href="https://www.tiktok.com/@nixxy.i?_t=ZS-8y5281zry0G&_r=1"><img src="image/icon/tt.png"></a>
+	<a href="https://linktr.ee/syirahk?utm_source=linktree_profile_share&ltsid=f3a8294a-a3f2-42ae-9b22-b8a56f437b12"><img src="image/icon/linktree.png"></a>
+	</div>
+	</div>	
+   </div>
+
+    <div class="reveal" id="header-content">
+
+	<h2>Portrait &<br>Caricature</h2>
+    </div>
+	
+	</div>
+	
+	<div class="reveal" id="kakoren">
+	<img src="image/potrait/kakoren.jpg" alt="kakoren" />
+	</div>
+	
+    <div class="reveal" id="potrait">
+    <div class="reveal" id="potrait-text">
+      <h2>Potrait</h2>
+      <p>
+        These are portrait drawings I made based on requests from my friends. All of them were hand-drawn with care, using the cross-hatching technique to add depth and texture. Each piece reflects a bit of their personality through my personal drawing style.
+     
+      </p>
+    </div>
+  </div>
+  
+	
+	<div id="area2">
+	<div class="reveal" id="pensel">
+	<h2>The pencil that I <br> love to used</h2>	
+	<h4>2B 5B 6B 8B</h4>
+	<div class="pensel">	
+	<img src="image/potrait/Screenshot_2025-07-06_221307-removebg-preview.png" alt="pensel1" />
+	<img src="image/potrait/Screenshot_2025-07-06_221227-removebg-preview.png" alt="pensel2" />
+	<img src="image/potrait/Screenshot_2025-07-06_221149-removebg-preview.png" alt="pensel3" />
+	<img src="image/potrait/Screenshot_2025-07-06_221209-removebg-preview.png" alt="pensel4" />
+	</div>
+	</div>
+	
+	<div class="reveal" id="ammar">
+	<img src="image/potrait/6253444564929068344_121.jpg" alt="ammar" />
+	</div>
+	</div>
+	
+	<div id="line"> </div>
+	
+	<div class="reveal" id="caricature">
+	<img src="image/me/ioimall1.jpg"	alt="ioi1">
+    <div class="reveal" id="caricature-text">
+    <h2>Caricature</h2>
+    <p>
+       These caricature drawings were made during a live school event at IOI Mall to promote Sekolah Seni. Most of the artworks were based on reference photos of Malaysian artists and public figures, drawn on the spot as examples for visitors.
+	   <br>
+	   https://www.tiktok.com/@nixxy.i?_t=ZS-8y5281zry0G&_r=1I used black brush markers for bold outlines and grey Copic markers for shadowing, creating strong contrast and playful character in each piece. This experience helped me improve my confidence in live sketching and interacting with an audience.
+    </p>
+	<img src="image/me/ioimall2.jpg"	alt="ioi2">
+    </div>
+  </div>
+ 
+	
+  <footer>
+	<div id="footer"> 
+    &copy; Syirahk 2025. All rights reserved.
+	</div> 	
+  </footer>
+
+	<script>
+  const area = document.querySelector('.scroll-gallery');
+  area.addEventListener("wheel", function (e) {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      // Paksa scroll kiri-kanan guna roda mouse
+      e.preventDefault();
+      area.scrollLeft += e.deltaY;
+    }
+  }, { passive: false });
+</script>
+
+
+
+	<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal');
+
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const revealTop = el.getBoundingClientRect().top;
+      const revealPoint = 100; // berapa awal dia fade-in
+
+      if (revealTop < windowHeight - revealPoint) {
+        el.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll); // bila mula, trigger terus
+</script>
+
+
+
+	
+</body>
+</html>
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Painting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Lexend:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/second.css">
+	
+
+</head>
+<body>
+	
+    <div class="reveal" id="SuperWrapper">
+		
+	<div id="Wrapper"> 
+		
+	<div id="navbar">
+		
+	<div id="Logo"> 
+	<img src="image/icon/Asset 1.png" alt="logo" />
+	</div>
+			
+		
+		
+	
+	<div id="navigation">
+    <a href="About_Me.html">About Me</a>
+    <a href="painting.html">Painting</a>
+    <a href="drawing.html">Drawing</a>
+    <a href="graphic_design.html">Graphic Design</a>
+	<a href="potrait.html">Potrait & Caricature</a>
+	<a href="digital_art.html">Digital Art</a>
+	</div>
+		
+	<div id="Icon">
+	<a href="https://instagram.com/syirahk_/"><img src="image/icon/instagram.png"></a>
+	<a href="https://www.tiktok.com/@nixxy.i?_t=ZS-8y5281zry0G&_r=1"><img src="image/icon/tt.png"></a>
+	<a href="https://linktr.ee/syirahk?utm_source=linktree_profile_share&ltsid=f3a8294a-a3f2-42ae-9b22-b8a56f437b12"><img src="image/icon/linktree.png"></a>
+	</div>
+	</div>	
+   </div>
+
+    <div class="reveal" id="header-content">
+	
+	<h2>Painting</h2>
+    </div>
+	
+	</div>
+	
+	<div class="reveal" id="artwork">
+    <img src="image/painting/batuseremban.jpg" alt="artwork" />
+    </div>
+
+    <div class="reveal" id="about">
+    <div class="reveal" id="about-text">
+      <h2>Round 2: <br> Threads of <br> Play</h2>
+	  <h4>
+		Acrylic on Canvas <br>
+        50 x 60cm <br>
+        2022
+		</h4>	
+      <p>
+      In this artwork, there are two girls from different cultural backgrounds which is one from Malaysia and the other from Japan. They share a moment of joy through a familiar game. While their clothes and origins are distinct, the way they toss and catch small objects shows how play transcends borders. This piece celebrates how traditional games like Batu Seremban and Otedama connect people beyond language, distance, and time.
+      </p>
+    </div>
+  </div>
+	<div class="reveal" id="teknik">
+  <h2>Technique</h2>
+
+  <div class="technique-item">
+    <img src="image/painting/7e77b14981f759a099aac8511b928302 - Copy.jpg" alt="teknik1" />
+    <h4>Color Gradient</h4>
+  </div>
+
+  <div class="technique-item">
+    <img src="image/painting/7e77b14981f759a099aac8511b928302 - Copy (2).jpg" alt="teknik2" />
+    <h4>Tint Paint</h4>
+  </div>
+
+  <div class="technique-item">
+    <img src="image/painting/7e77b14981f759a099aac8511b928302.jpg" alt="teknik3" />
+    <h4>Color Mixing</h4>
+  </div>
+</div>
+
+	
+  	<div class="reveal" id="brush">
+	<h2>Brushes that I <br> have used</h2>	
+	<h4>18          20           1’</h4>
+	<img src="image/painting/berus1.png" alt="berus1" />
+	<img src="image/painting/berus2.png" alt="berus2" />
+	<img src="image/painting/berus3.png" alt="berus3" />
+	</div>
+	
+  <footer>
+	<div id="footer"> 
+    &copy; Syirahk 2025. All rights reserved.
+	</div> 	
+  </footer>
+
+	<script>
+  const area = document.querySelector('.scroll-gallery');
+  area.addEventListener("wheel", function (e) {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      // Paksa scroll kiri-kanan guna roda mouse
+      e.preventDefault();
+      area.scrollLeft += e.deltaY;
+    }
+  }, { passive: false });
+</script>
+
+
+
+	<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal');
+
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const revealTop = el.getBoundingClientRect().top;
+      const revealPoint = 100; // berapa awal dia fade-in
+
+      if (revealTop < windowHeight - revealPoint) {
+        el.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll); // bila mula, trigger terus
+</script>
+
+
+
+	
+</body>
+</html>

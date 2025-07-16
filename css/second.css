@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #FAE8EC;
+  font-family: 'Poppins', sans-serif;
+}
+
+#Wrapper{
+  position: relative;
+  z-index: 2;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  position: relative;
+  z-index: 3;
+}
+
+#Logo img {
+  width: 130px;
+  height: auto;
+  margin-left: 50px;
+}
+
+#navigation {
+  display: flex;
+  gap: 20px;
+}
+
+#navigation a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+#navigation a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFB6C1; /* soft pink underline */
+  transition: width 0.4s ease;
+}
+
+#navigation a:hover {
+  color: #FFB6C1;
+}
+
+#navigation a:hover::after {
+  width: 100%;
+}
+
+#Icon img {
+  width: 25px;
+  margin-left: 10px;
+  transition: transform 0.2s;
+}
+
+#Icon img:hover {
+  transform: scale(1.1);
+}
+
+#SuperWrapper {
+  background-image: url("../image/painting/sketchbook.png");
+  background-size: cover;
+  background-position: center;
+  height: 500px;      
+  width: 100%;       
+  position: relative; 
+  overflow: hidden; 
+}
+
+#SuperWrapper:before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* gelapkan sikit */
+  z-index: 1; /* belakang teks tapi atas gambar */
+}
+
+
+#header-content {
+  position: absolute;
+  z-index: 2;
+  bottom: 120px; /* boleh adjust ikut gambar background */
+  left: 80%;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 1;
+}
+
+#header-content h2 {
+  font-size: 120px;
+  color: white;
+  margin-bottom: -10px;
+  letter-spacing: 1px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: bold;
+  white-space: nowrap;
+  margin-left: -300px;	
+}
+
+#artwork {
+  position: relative;
+  z-index: 4;
+  margin-top: 100px; /* bertindih ke atas */
+  margin-bottom: -30px; /* rapat dengan About */
+  margin-left: 200px;
+}
+
+#artwork img {
+  width: 500px;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+#about h2{
+	font-size: 60px;
+	margin-bottom: 8px;
+	line-height: 1.1; /* lebih rapat antara baris lepas <br> */
+}
+
+#about-text {
+  color:black;
+  margin-left:750px;
+  margin-right:150px;
+  margin-top:-400px;
+}
+
+#about-text p {
+  line-height: 1.5;
+  font-size: 15px;
+  justify-content: space-around;
+  margin-top:10px;
+  margin-bottom: 80px;
+  text-align: justify;
+}
+
+#teknik {
+  margin-left: 200px;
+  margin-top: -60px;
+  margin-bottom: 500px;
+}
+
+.technique-item {
+  margin-bottom: 10px; /* spacing antara setiap gambar + tajuk */
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.technique-item img {
+  width: 60px;
+  height: auto;
+}
+
+.technique-item h4 {
+  font-size: 15px;
+  margin: 0; /* remove default spacing */
+}
+
+
+#brush{
+	margin-left: 980px;
+	margin-top:-700px;
+	margin-bottom:0px;
+}
+
+#brush img {
+  margin-right: 20px;
+}
+
+#brush img:nth-child(3) {
+  width: 50px;
+}
+
+#brush img:nth-child(4) {
+  width: 85px;
+}
+
+#brush img:nth-child(5) {
+  width: 130px;
+}
+
+#brush h2{
+	line-height: 1.1; /* lebih rapat antara baris lepas <br> */
+	font-size:40px;
+}
+
+#brush h4{
+	word-spacing: 40px;
+}
+
+footer {
+  background-color: #6D1634;
+}
+
+#footer {
+  color: white;
+  text-align: center;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 12px;
+  margin-top:-7px;
+}
+

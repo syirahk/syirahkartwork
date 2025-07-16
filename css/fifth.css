@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+
+body {
+  background-color: #FAE8EC;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+#Wrapper{
+  position: relative;
+  z-index: 2;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  position: relative;
+  z-index: 3;
+}
+
+#Logo img {
+  width: 130px;
+  height: auto;
+  margin-left: 50px;
+}
+
+
+#navigation {
+  display: flex;
+  gap: 20px;
+}
+
+#navigation a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+#navigation a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFB6C1; /* soft pink underline */
+  transition: width 0.4s ease;
+}
+
+#navigation a:hover {
+  color: #FFB6C1;
+}
+
+#navigation a:hover::after {
+  width: 100%;
+}
+
+#Icon img {
+  width: 25px;
+  margin-left: 10px;
+  transition: transform 0.2s;
+}
+
+#Icon img:hover {
+  transform: scale(1.1);
+}
+
+#SuperWrapper {
+  background-image: url("../image/potrait/ayshah.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;      
+  width: 100%;       
+  position: relative; 
+  overflow: hidden; 
+}
+
+
+
+#SuperWrapper:before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* gelapkan sikit */
+  z-index: 1; /* belakang teks tapi atas gambar */
+}
+
+
+#header-content {
+  position: absolute;
+  z-index: 2;
+  bottom: 120px; /* boleh adjust ikut gambar background */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 1;
+}
+
+#header-content h2 {
+  font-size: 120px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: -30px;
+  font-family: 'Lexend', sans-serif;
+  margin-left: 500px;	
+  line-height: 0.8;	
+}
+
+#potrait {
+  display: flex;
+  align-items: center;
+  backface-visibility: hidden;
+  margin-bottom:100px;	  
+}
+
+
+#potrait h2{
+	font-size: 60px;
+	margin-bottom: 8px;
+	margin-top:0px;
+	line-height: 1.1; /* lebih rapat antara baris lepas <br> */
+	
+}
+
+#potrait-text {
+  color:black;
+  margin-left:750px;
+  margin-right:150px;
+  margin-top:-300px;
+  margin-bottom: 100px;	
+}
+
+#potrait-text p {
+  line-height: 1.5;
+  font-size: 15px;
+  justify-content: space-around;
+  margin-top:10px;
+  margin-bottom: 80px;
+  text-align: justify;
+}
+
+
+
+#pensel{
+	margin-left: 200px;
+	margin-top:0px;
+	margin-bottom:-200px;
+	
+}
+
+#pensel img{
+	width: 300px;
+	margin-left: 10px;
+	margin-right: -200px;
+}
+
+.pensel{
+	margin-left: -220px;
+	
+}
+
+#pensel h2{
+	font-size:40px;
+	line-height: 1.1; /* lebih rapat antara baris lepas <br> */
+}
+
+#pensel h4{
+	word-spacing: 40px;
+}
+
+#kakoren img{
+	width:450px;
+	margin-left: 200px;
+	margin-top:100px;
+	margin-bottom: -100px;
+	border: 20px solid white;
+}
+
+#ammar img{
+	width:450px;
+	margin-left: 800px;
+	margin-top:-500px;
+	margin-bottom: 100px;
+	border: 20px solid white;
+}
+
+#line {
+	background-color:#6D1634;
+	height:10px;
+
+}
+
+#caricature {
+  display: flex;
+  align-items: center;
+  backface-visibility: hidden;
+	margin-left: 80px;
+}
+
+
+#caricature h2{
+	font-size: 60px;
+	margin-bottom: 8px;
+	margin-top: 200px;
+	
+}
+
+#caricature-text {
+  color:black;
+  margin-left:200px;
+  margin-right:100px;
+  margin-top:0px;
+}
+
+#caricature-text p {
+  line-height: 1.5;
+  font-size: 15px;
+  justify-content: space-around;
+  margin-top:10px;
+  margin-bottom: 80px;
+  text-align: justify;
+margin-right: 200px;
+}
+
+#caricature img:nth-child(1) {
+	width: 400px;
+	margin-left:200px;
+	margin-top:-400px;
+}
+
+#caricature img:nth-child(3) {
+	width: 1000px;
+	margin-left:-600px;
+	margin-top:80px;
+	margin-bottom: 100px;
+} 
+
+footer {
+  background-color: #6D1634;
+}
+
+#footer {
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 12px;
+}
+
+

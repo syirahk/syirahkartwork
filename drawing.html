@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  
+  <title>drawing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Lexend:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/third.css">
+	
+
+</head>
+<body>
+	
+    <div class="reveal" id="SuperWrapper">
+		
+	<div id="Wrapper"> 
+		
+	<div id="navbar">
+		
+	<div id="Logo"> 
+	<img src="image/icon/Asset 1.png" alt="logo" />
+	</div>
+			
+	
+	<div id="navigation">
+    <a href="About_Me.html">About Me</a>
+    <a href="painting.html">Painting</a>
+    <a href="drawing.html">Drawing</a>
+    <a href="graphic_design.html">Graphic Design</a>
+	<a href="potrait.html">Potrait & Caricature</a>
+	<a href="digital_art.html">Digital Art</a>
+	</div>
+		
+	<div id="Icon">
+	<a href="https://instagram.com/syirahk_/"><img src="image/icon/instagram.png"></a>
+	<a href="https://www.tiktok.com/@nixxy.i?_t=ZS-8y5281zry0G&_r=1"><img src="image/icon/tt.png"></a>
+	<a href="https://linktr.ee/syirahk?utm_source=linktree_profile_share&ltsid=f3a8294a-a3f2-42ae-9b22-b8a56f437b12"><img src="image/icon/linktree.png"></a>
+	</div>
+	</div>	
+   </div>
+
+    <div class="reveal" id="header-content">
+	
+	<h2>Drawing</h2>
+    </div>
+	
+	</div>
+	
+	<div class="reveal" id="artwork">
+    <img src="image/merpati/merpatisinggahseribu.png" alt="artwork" />
+    </div>
+
+    <div class="reveal" id="about">
+    <div class="reveal" id="about-text">
+      <h2>A Thousand <br> Doves Gather</h2>
+	  <h4>
+		Mixed Media on Paper <br>
+        42.0 x 59.4 cm <br>
+        2023
+		</h4>	
+      <p>
+      This artwork portrays a flock of doves gathering together, symbolizing unity, companionship, and the instinct to move as one. Where there is one dove, many others will follow. Also, it is showing how togetherness brings strength. Much like humans, doves seek the comfort of a group, reminding us that unity is what helps us thrive.
+      </p>
+    </div>
+  </div>
+	
+	<div class="reveal" id="teknik">
+	<h2>Technique</h2>	
+	
+	<div class="technique-item">	
+	<img src="image/potrait/9a7f64872837cfce1c6341e5b12660bd.jpg" alt="teknik1" />
+	<h4>Cross hatching</h4>	
+	</div>	
+		
+	<div class="technique-item">	
+	<img src="image/potrait/9a7f64872837cfce1c6341e5b12660bd - Copy.jpg" alt="teknik2" />
+	<h4>Directional lines</h4>
+	</div>
+		
+	<div class="technique-item">	
+	<img src="image/potrait/3666e9fd54dd13c8d59b4b80bf7e7284.jpg" alt="teknik3" />
+	<h4>Blending</h4>
+	</div>
+	</div>
+	
+  	<div class="reveal" id="dove">
+	<img src="image/merpati/merpati-01.jpg" alt="stulang" />
+	<h4>The picture that I took :3 -Stulang Beach, Johor</h4>
+	</div>
+	
+  <footer>
+	<div id="footer"> 
+    &copy; Syirahk 2025. All rights reserved.
+	</div> 	
+  </footer>
+
+	<script>
+  const area = document.querySelector('.scroll-gallery');
+  area.addEventListener("wheel", function (e) {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      // Paksa scroll kiri-kanan guna roda mouse
+      e.preventDefault();
+      area.scrollLeft += e.deltaY;
+    }
+  }, { passive: false });
+</script>
+
+	<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal');
+
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const revealTop = el.getBoundingClientRect().top;
+      const revealPoint = 100; // berapa awal dia fade-in
+
+      if (revealTop < windowHeight - revealPoint) {
+        el.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll); // bila mula, trigger terus
+</script>
+	
+</body>
+</html>
